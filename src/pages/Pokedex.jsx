@@ -5,6 +5,7 @@ import { getAllPokemons } from '../helpers/getData';
 import { useEffect, useState } from 'react';
 import { useFetch } from '../hooks/useFetch';
 import { Header } from '../components/Header';
+import { pagination } from '../helpers/functions';
 export const Pokedex = () => {
   const nameTraine = useSelector(state => state.nameTraine);
   const [pokemones, setPokemones] = useState([]);
@@ -23,38 +24,10 @@ export const Pokedex = () => {
 
   }
 
-  const pagination = () =>{
-    const POKEMONS_PER_PEGE =12
-    
-    const sliceStar = (currentPage - 1 ) * POKEMONS_PER_PEGE;
-    const sliceEnd = sliceStar + POKEMONS_PER_PEGE
-    const pokemonsInPage = pokemones.slice(sliceStar,sliceEnd)
-
-    const lastPage = Math.ceil(pokemones.length / POKEMONS_PER_PEGE) || 1;
 
 
-    const PAGES_PER_BLOCK = 5;
-    const actualBlock = Math.ceil(currentPage / PAGES_PER_BLOCK);
-
-    const pagesInBlock = [];
-    const minPage = (actualBlock -1) * PAGES_PER_BLOCK + 1;
-    const maxPage = actualBlock * PAGES_PER_BLOCK;
-
-    for( let i = minPage; i<=maxPage; i++){
-      if(i<=lastPage){
-        pagesInBlock.push(i)
-      }
-     
-    }
-
-    return{
-      pokemonsInPage,
-      lastPage,
-      pagesInBlock
-    }
-  }
-
-  const {lastPage,pagesInBlock,pokemonsInPage} = pagination();
+  const {lastPage,pagesInBlock,pokemonsInPage} = pagination(currentPage,pokemones);
+  
 
   const hanledClickPreviusPage=()=>{
     const newCurrentpage = currentPage - 1;
