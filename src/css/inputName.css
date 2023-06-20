@@ -1,0 +1,60 @@
+.container_input_name
+{
+
+
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    
+}
+
+.container_input_name input
+{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    padding: 13px;
+    font-size: 1.2rem;
+   
+    
+}
+
+.container_input_name input::placeholder
+{
+    color: rgba(211, 211, 211, 1);
+}
+
+.btn_name
+{
+    background: rgba(217, 63, 63, 1);
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    font-size: 1.2rem;
+    border: none;
+    max-width: 120px;
+    padding: 0px 10px;
+   
+}
+
+@media (max-width:300px){
+
+    .container_input_name
+    {
+        font-size: 15px;
+    }
+
+    .container_input_name input
+    {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    
+    .btn_name
+    {
+        font-size: 12px;
+    }
+
+}

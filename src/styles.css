@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    
+
+}
+
+body
+{
+    background: #E5E5E5;
+}
+
+
+.normal
+{
+    background: linear-gradient(179.75deg, #5E736C -19.96%, #728881 43.67%, #A8A8A8 138.4%);
+   
+
+}
+.bnormal
+{
+    border: 7px solid #5E736C;
+    background: #5E736C;
+   
+    
+
+}
+
+.cnormal
+{
+    color:#5E736C;
+
+}
+
+
+.fighting
+{
+ background: linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%);
+
+
+}
+
+.bfighting
+{
+    border: 7px solid #96402A;
+    background: #96402A ;
+}
+
+.cfighting
+{
+    color:  #96402A;
+}
+
+.flying
+{
+    background: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+
+    
+}
+
+.bflying
+{
+    border: 7px solid #735259;
+    background: #735259;
+}
+
+.cflying
+{
+    color:  #735259;
+}
+
+.poison
+{
+    background: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%);
+    
+
+}
+
+.bpoison
+{
+    border: 7px solid #5B3184;
+    background: #5B3184;
+}
+
+.cpoison
+{
+    color:  #5B3184;
+}
+
+.ground
+{
+    background: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%);
+    
+   
+
+
+}
+
+.bground
+{
+    border: 7px solid #654008;
+    background: #654008;
+
+}
+
+.cground
+{
+    color:  #654008;
+
+}
+
+.rock
+{
+    background: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%);
+    
+    
+
+}
+
+.brock
+{
+    border: 7px solid #7E7E7E;
+    background: #7E7E7E ;
+
+}
+
+.crock
+{
+    color:  #7E7E7E;
+
+}
+
+
+.bug
+{
+    background: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%);
+    
+    
+}
+
+.bbug
+{
+    border: 7px solid #62DB60;
+    background: #62DB60;
+}
+
+.cbug
+{
+    color:  #62DB60;
+}
+
+.ghost
+{
+    background: linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%);
+    
+ 
+}
+
+.bghost
+{
+    border: 7px solid #454AA8;
+    background: #454AA8;
+}
+
+.cghost
+{
+    color:  #454AA8;
+}
+
+.steel
+{
+    background: linear-gradient(179.75deg, #5E736C -19.96%, #728881 43.67%, #A8A8A8 138.4%);
+    
+ 
+}
+
+.bsteel
+{
+    border: 7px solid #5E736C;
+    background: #5E736C ;
+}
+
+.csteel
+{
+    color:  #5E736C;
+}
+
+.fire
+{
+    background: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
+    
+   
+}
+
+.bfire
+{
+    border: 7px solid #F96D6F;
+    background: #F96D6F ;
+}
+
+.cfire
+{
+    color:  #F96D6F;
+}
+
+.water
+{
+    background: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);
+    
+    
+}
+.bwater{
+    border: 7px solid #1479FB;
+    background: #1479FB;
+}
+
+.cwater{
+    color:  #1479FB;
+}
+
+.grass
+{
+    background: rgb(126,198,197);
+    background: linear-gradient(180deg, rgba(126,198,197,1) 1%, rgba(171,218,198,1) 52%,    rgba(202,224,152,1) 93%);
+    
+    
+
+}
+
+.bgrass{
+    border: 7px solid rgba(126,198,197,1) ;
+    background: rgba(126,198,197,1);
+}
+
+.cgrass{
+    color: rgba(65, 100, 96, 1);
+    
+}
+
+
+.electric
+{
+    background: linear-gradient(179.75deg, #0C1395 -19.96%, #2B319B 43.67%, #7075D9 138.4%);
+    
+    
+
+}
+
+.belectric
+{
+    border: 7px solid #0C1395;
+    background: #0C1395;
+
+}
+
+.celectric
+{
+    color: #0C1395;
+
+}
+
+.psychic
+{
+    background: linear-gradient(179.75deg, #E62D2D -19.96%, #D13E3E 43.67%, #F07F7F 138.4%);
+
+    
+}
+
+.bpsychic
+{
+    border: 7px solid #D13E3E;
+    background: #D13E3E;
+
+}
+
+.cpsychic
+{
+    color:  #D13E3E;
+
+}
+
+.ice
+{
+    background: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);
+    
+   
+
+}
+
+.bice
+{
+    border: 7px solid #6FBEDF;
+    background: #6FBEDF;
+}
+
+.cice
+{
+    color:   #6FBEDF;
+}
+
+.dragon
+{
+    background: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%);
+    
+   
+
+}
+
+.bdragon
+{
+    border: 7px solid #478A93;
+    background: #478A93;
+
+}
+
+.cdragon
+{
+    color:   #478A93;
+
+}
+
+.dark
+{
+    background: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
+    
+    
+
+}
+
+.bdark
+{
+    border: 7px solid #030706;
+    background: #030706;
+
+}
+
+.cdark
+{
+    color:  #030706;
+
+}
+
+.fairy
+{
+    background: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%);
+
+   
+
+}
+.bfairy
+{
+    border: 7px solid #971B45;
+    background: #971B45;
+
+}
+
+.cfairy
+{
+    color:  #971B45;
+
+}
+
+.unknown
+{
+    background: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%);
+
+    
+
+}
+.bunknown
+{
+    border: 7px solid #7E7E7E;
+    background: #7E7E7E;
+}
+
+.cunknown
+{
+    color: #7E7E7E;
+}
+
+
+.shadow
+{
+    background: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
+    
+    
+
+}
+
+.bshadow
+{
+    border: 7px solid #030706;
+    background: #030706 ;
+}
+
+.cshadow
+{
+    color:  #030706;
+}

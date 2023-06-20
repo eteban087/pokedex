@@ -1,0 +1,190 @@
+
+
+.container_pokedex
+{
+    max-width: 1300px;
+    min-height: 130px;
+    margin: auto;
+    padding: 5px 40px;
+
+
+}
+
+.color_span
+{
+    color: rgba(254, 25, 54, 1);
+}
+
+.container_pokedex h3{
+    font-weight: 400;
+    
+}
+
+.grid_search
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:  50px;
+    margin-top: 30px;
+    gap: 30px;
+    
+}
+
+
+
+.container_search_pokemon
+{
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.container_search_pokemon input
+{
+    /* max-width: 500px; */
+    width: 100%;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    height: 100%;
+    font-size: 1.2rem;
+    padding: 0px 20px;
+}
+
+.btn_pokemo
+{
+    background: rgba(217, 63, 63, 1);
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    font-size: 1.2rem;
+    border: none;
+    width: 200px;
+    padding: 0px 10px;
+    height: 100%;
+
+}
+
+.container_filter_pokemon select
+{
+    height: 100%; 
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0px 10px;
+    border: none;
+    outline: none;
+    color: rgba(15, 15, 45, 1);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background: rgba(255, 255, 255, 1);
+}
+
+.pokemon_grid
+{
+  max-width: 1300px;
+  min-height: 450px;
+  margin: auto;
+  padding: 10px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(min(250px,100%),1fr));
+  gap: 10px;
+   
+}
+
+.container_pagination
+{
+    width: 100%;
+    padding: 70px 0px;
+    min-height: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.numbre_page
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(221, 26, 26, 1);
+    color: #fff;
+   
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+
+.color_page
+{
+    background: rgb(182, 103, 103);
+    color: #fff;
+}
+
+
+
+
+
+
+@media (max-width:900px){
+    .grid_search
+    {
+        grid-template-rows: repeat(2,50px);
+
+    }
+    .container_filter_pokemon
+    {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .container_search_pokemon
+    {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+    }
+
+   
+
+   
+}
+
+@media (max-width:440px){
+
+    .grid_search
+    {
+        grid-template-rows: repeat(2,40px);
+
+    }
+
+    .container_search_pokemon
+    {
+        font-size: 15px;
+    }
+
+    .container_search_pokemon input
+    {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    
+    .btn_pokemo
+    {
+        font-size: 13px;
+    }
+
+    .container_pokedex
+    {
+        padding: 0px 10px;
+
+    }
+
+    .container_filter_pokemon select
+    {
+        font-size: 14px;
+    }
+
+}   

@@ -1,0 +1,24 @@
+.header
+{
+   width: 100%;
+   position: relative;
+
+}
+
+.header img{
+    width: 100%;
+}
+
+.container_title{
+    width: 30%;
+    position: absolute;
+    top: 21%;
+    left: 10%;
+    
+
+
+}
+
+.container_title img{
+    width: 100%;
+}

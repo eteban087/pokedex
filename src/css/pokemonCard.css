@@ -1,0 +1,110 @@
+
+
+.card
+{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    font-family: "Roboto", sans-serif;
+    min-height: 440px;
+    transition: all 300ms;
+  
+   
+}
+
+.card:hover
+{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.color_card
+{
+
+ 
+    height: 35%;
+    position: relative;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  
+}
+
+.container_pokemon
+{
+    width: 100%;
+    position: absolute;
+    /* border: 1px solid red; */
+    top: 15%;
+
+}
+
+.container_img
+{
+    width: 180px;
+    /* border: 1px solid red;   */
+    margin: auto;
+}
+
+
+.info_card
+{
+    background: #FFF;
+    height: 70%;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius: 5px;
+}
+
+.body_card
+{
+  
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(229, 229, 229, 1);
+}
+
+.body_card h2{
+    
+    text-transform: capitalize;
+}
+
+.body_card h4{
+  color:  rgba(79, 79, 79, 1);
+  text-transform: capitalize;
+  
+}
+
+.body_card p{
+    color: rgba(159, 159, 159, 1);
+}
+
+.footer_card
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,60px);
+    height: 140px;
+    
+    
+}
+
+.footer_card p{
+    color:  rgba(159, 159, 159, 1);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.speed,.attack, .hp, .defense
+{
+    /* border: 1px solid #000; */
+    height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 5px
+}
