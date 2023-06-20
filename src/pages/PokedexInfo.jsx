@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getDataPokemon } from '../helpers/getData'
-import {  useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import "../css/pokedexInfo.css"
 import { Header } from '../components/Header';
 import { colorType } from '../helpers/functions';
@@ -19,7 +19,7 @@ export const PokedexInfo = () => {
 
   }, [])
 
-  
+
 
   const diccPokemonBackground = {
     normal: "normal",
@@ -93,41 +93,47 @@ export const PokedexInfo = () => {
 
   }
 
-  
-  const formatTypesPokemon1 = (types = [])=>{
-    const nameTypes =  types.map(type=>type.type.name);
 
-    if(nameTypes[0]){
+  const formatTypesPokemon1 = (types = []) => {
+    const nameTypes = types.map(type => type.type.name);
+
+    if (nameTypes[0]) {
       return nameTypes[0]
     }
-  
+
   }
 
-  const formatTypesPokemon2 = (types = [])=>{
-    const nameTypes =  types.map(type=>type.type.name);
+  const formatTypesPokemon2 = (types = []) => {
+    const nameTypes = types.map(type => type.type.name);
 
-    if(nameTypes[1]){
+    if (nameTypes[1]) {
       return nameTypes[1]
-    }else{
+    } else {
       return "No type"
     }
-   
-  
+
+
   }
 
 
 
-  const percentPogresStat=(baseStat)=>{
+  const percentPogresStat = (baseStat) => {
     const MAX_STAT = 255;
-    return (baseStat *100)/MAX_STAT
+    return (baseStat * 100) / MAX_STAT
   }
 
- 
-  
+
+  console.log(pokemon)
+
+  const getMoves = (array=[])=>{
+      return array.slice(0,25)
+  }
+
+
 
   return (
     <>
-      <Header  />
+      <Header />
 
       <main className='main'>
         <div className="container_info_pokemon">
@@ -152,16 +158,16 @@ export const PokedexInfo = () => {
                 <div className="container_weight_and_height">
                   <div className='weight'><p>Weight</p><h3>{pokemon?.weight}</h3></div>
                   <div className='height'><p>Height</p><h3>{pokemon?.height}</h3></div>
-                  
+
                 </div>
               </div>
 
               <div className="container_types_and_skills">
                 <div className="type_p"><h2>Type</h2></div>
                 <div className="skills_p"><h2>Abilities</h2></div>
-                <div className={`type_one ${diccPokemonBorder[colorType(pokemon?.types)]}`}>{ formatTypesPokemon1(pokemon?.types)}</div>
-                <div className="type_two">{ formatTypesPokemon2(pokemon?.types)}</div>
-                
+                <div className={`type_one ${diccPokemonBorder[colorType(pokemon?.types)]}`}>{formatTypesPokemon1(pokemon?.types)}</div>
+                <div className="type_two">{formatTypesPokemon2(pokemon?.types)}</div>
+
                 <div className="skill_one">{pokemon?.abilities[0].ability.name}</div>
                 <div className="skill_two">{pokemon?.abilities[1].ability.name}</div>
               </div>
@@ -177,21 +183,21 @@ export const PokedexInfo = () => {
               <div className="body_stats">
 
 
-               {
-                pokemon?.stats.map(stat=>(
-                  <div key={stat.stat.url} className="stat_container">
-                  <div className="stat_info">
-                    <h4>{stat.stat.name}:</h4>
-                    <p>{stat.base_stat}/255</p>
-                  </div>
-                  <div className="stat_bar">
-                    <div className="_bar" style={{width:`${percentPogresStat(stat.base_stat)}%`}}></div>
-                  </div>
-                </div>
-                ))
-               }
+                {
+                  pokemon?.stats.map(stat => (
+                    <div key={stat.stat.url} className="stat_container">
+                      <div className="stat_info">
+                        <h4>{stat.stat.name}:</h4>
+                        <p>{stat.base_stat}/255</p>
+                      </div>
+                      <div className="stat_bar">
+                        <div className="_bar" style={{ width: `${percentPogresStat(stat.base_stat)}%` }}></div>
+                      </div>
+                    </div>
+                  ))
+                }
 
-                
+
 
 
 
@@ -200,6 +206,28 @@ export const PokedexInfo = () => {
 
 
             </div>
+          </div>
+        </div>
+
+        <div className="container_movements">
+          <div className="container_stats">
+            <div className="header_stats">
+              <div className='title_stats'><h2>Movements</h2></div>
+              <div className='line_stats'><div className="line_s"></div></div>
+              <div className='img_stats'><img src="/img/pokeStats.svg" alt="" /></div>
+            </div>
+          </div>
+
+          <div className="movements">
+          {
+            getMoves(pokemon?.moves).map(move=>(
+             
+              <div key={move.url} className="moves">
+               {move.move.name}
+             </div>
+            ))
+          }
+          
           </div>
         </div>
       </main>
