@@ -97,7 +97,7 @@ export const Pokedex = () => {
 // ESTA FUNCION ES PARA ACCEDER AL VALOR DEL INPUT QUE FILTRA POR NOMBRES
   const SearchPokemon = ({ target }) => {
     setNamePokemon(target.value)
-    pokemonsByName();
+
   }
 
 
