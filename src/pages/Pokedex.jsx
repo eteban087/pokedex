@@ -24,9 +24,14 @@ export const Pokedex = () => {
 
   }
 
+  
+  let newPokemons = pokemones.filter(pokemon => {
+    return pokemon.name.indexOf(namePokemon.toLowerCase().trim()) >= 0
+  })
 
 
-  const {lastPage,pagesInBlock,pokemonsInPage} = pagination(currentPage,pokemones);
+
+  const {lastPage,pagesInBlock,pokemonsInPage} = pagination(currentPage,newPokemons);
   
 
   const hanledClickPreviusPage=()=>{
@@ -99,34 +104,9 @@ export const Pokedex = () => {
 
 
 
-  // ESTA FUNCION ES PARA BUSCAR POR NOMBRE, EN CASO DE QUE SE HALLA FILTRADO POR TIPO HACE UNA PETICION DE ACUERDO AL TIPO SI NO LA PETICION SERA GENERAL
-  const pokemonsByName = async () => {
 
-    if (!currentType) {
-      const pokemons = await getAllPokemons();
-      
-      let newPokemons = pokemons.filter(pokemon => {
-        return pokemon.name.indexOf(namePokemon.toLowerCase().trim()) >= 0
-      })
-      setPokemones(newPokemons)
-    
 
-    } else {
-      useFetch(`https://pokeapi.co/api/v2/type/${currentType}/?&limit=40`).then(({ data }) => {
-        const { pokemon } = data;
-        const pokemons = pokemon.map(poke => {
-          return poke.pokemon
-        })
 
-        let newPokemons = pokemons.filter(pokemon => {
-          return pokemon.name.indexOf(namePokemon.toLowerCase().trim()) >= 0
-        })
-        setPokemones(newPokemons)
-
-      })
-
-    }
-  }
 
 
 
