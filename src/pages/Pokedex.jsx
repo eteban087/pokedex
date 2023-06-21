@@ -150,12 +150,12 @@ export const Pokedex = () => {
 
           <form onSubmit={onSubmit} className="container_search_pokemon">
             <input id="name_pokemon" value={namePokemon} onChange={SearchPokemon} type="text" placeholder='Buscar un pokemón' />
-            <button className='btn_pokemo'>Buscar</button>
+            <button className='btn_pokemo'>Search</button>
           </form>
 
           <div className="container_filter_pokemon">
             <select onChange={hanledType} name="" id="">
-              <option className='opcion' value="">Todos los pokemones</option>
+              <option className='opcion' value="">All pokemons</option>
               {
                 types?.map(type => (
                   <option id='poke' key={type.url} value={type.name}>{type.name}</option>

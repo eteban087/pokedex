@@ -27,9 +27,9 @@ export const InputName = () => {
                     type="text"
                     id = "name"
                     required
-                    placeholder='Tu nombre...' />
+                    placeholder='Your name...' />
 
-                <button className='btn_name'>Comenzar</button>
+                <button className='btn_name'>Start</button>
             </form>
         </>
     )
