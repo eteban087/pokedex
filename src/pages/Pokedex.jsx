@@ -24,7 +24,7 @@ export const Pokedex = () => {
 
   }
 
-  
+
   let newPokemons = pokemones.filter(pokemon => {
     return pokemon.name.indexOf(namePokemon.toLowerCase().trim()) >= 0
   })
@@ -86,8 +86,6 @@ export const Pokedex = () => {
 
 
 
-
-
   // ================================= ONSUBMIT DEL FORMULARIO
 
   const onSubmit = (e) => {
@@ -101,11 +99,6 @@ export const Pokedex = () => {
     setNamePokemon(target.value)
     pokemonsByName();
   }
-
-
-
-
-
 
 
 

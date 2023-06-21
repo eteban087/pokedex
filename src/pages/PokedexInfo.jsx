@@ -123,11 +123,26 @@ export const PokedexInfo = () => {
   }
 
 
-  console.log(pokemon)
 
   const getMoves = (array=[])=>{
       return array.slice(0,25)
   }
+
+  const getAbilitiesPokemon = (abilities = []) =>{
+    const nameAbilities =  abilities.map(ability=>{
+      return ability.ability.name
+     
+    });
+    
+    
+     if(!nameAbilities[1]){
+      nameAbilities[1] = "No ability"
+     }
+    
+     return nameAbilities[1]
+
+  }
+
 
 
 
@@ -169,7 +184,7 @@ export const PokedexInfo = () => {
                 <div className="type_two">{formatTypesPokemon2(pokemon?.types)}</div>
 
                 <div className="skill_one">{pokemon?.abilities[0].ability.name}</div>
-                <div className="skill_two">{pokemon?.abilities[1].ability.name}</div>
+                <div className="skill_two">{getAbilitiesPokemon(pokemon?.abilities)}</div>
               </div>
 
               <div className="container_stats">
@@ -222,7 +237,7 @@ export const PokedexInfo = () => {
           {
             getMoves(pokemon?.moves).map(move=>(
              
-              <div key={move.url} className="moves">
+              <div key={move.move.url} className="moves">
                {move.move.name}
              </div>
             ))
